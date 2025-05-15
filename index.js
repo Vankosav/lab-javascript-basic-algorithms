@@ -45,3 +45,45 @@ function reverseNav(hacker2) {
 console.log(reverseNav(hacker2));
 
 //lexicographic order
+hacker1 = hacker1.toLowerCase();
+hacker2 = hacker2.toLowerCase();
+
+if (hacker1 > hacker2) {
+  console.log("The driver's name goes first.")
+}
+else if (hacker1 < hacker2) {
+  console.log("Yo, the navigator goes first definitely.")
+}
+else {
+  console.log("What?! You both have the same name?")
+} 
+
+//Bonus 
+
+let count = 0; 
+let longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."; 
+let words = longText.split(" ").length; 
+
+function countEt (longText) {
+let count = 0; 
+
+for (let i = 0; i < longText.length; i++) {
+if (words === 'et') {
+  return count++; 
+} 
+}
+return count;
+}
+
+//Bonus 2
+
+let phraseToCheck = "";
+
+function isPalindrome(phraseToCheck) {
+  for (let i = 0, j = phraseToCheck.length - 1; i < j; i++, j--) {
+    if (phraseToCheck[i] !== phraseToCheck[j]) {
+      return false
+    }
+  }
+return true; 
+}
